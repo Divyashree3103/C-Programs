@@ -1,0 +1,58 @@
+//program to stimulate simple calculator
+#include<stdio.h>
+int main()
+{
+int a,b;
+char op;
+float result;
+printf("enter a & b:");
+scanf("%d%d",&a,&b);
+printf("enter a operator:");
+scanf(" %c",&op);
+if(op=='+')
+{
+result=a+b;
+printf("addition of two nos=%f\n",result);
+}
+else if(op=='-')
+{
+result=a-b;
+printf("difference of two nos=%f\n",result);
+}
+else if(op=='*')
+{
+result=a*b;
+printf("product of two nos=%f\n",result);
+}
+else if(op=='/')
+{
+if(b==0)
+{
+printf("division not possible\n");
+return 1;
+}
+else
+{
+result=a/b;
+printf("quotient=%f\n",result);
+}
+}
+else if(op=='%')
+
+{
+if(b==0)
+{
+printf("division not possible\n");
+return 1;
+}
+else
+{
+result=a%b;
+printf("remainder=%f\n",result);
+}
+}
+else
+{
+printf("Invalid operation");
+}
+}
